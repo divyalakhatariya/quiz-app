@@ -1,0 +1,40 @@
+/* Home Page Content */
+.home {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Max width for the content */
+  }
+  
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px;
+    margin-top: 20px;
+    justify-items: center; /* Center the cards horizontally */
+  }
+
+  
+/* Larger Tablets and Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px; /* Reduced gap for better fit */
+  }
+
+  .navbar h1 {
+    font-size: 1.6rem;
+  }
+
+  .category-card {
+    width: 220px; /* Slightly smaller cards */
+    height: 120px;
+  }
+
+  .category-card .icon {
+    font-size: 2rem; /* Slightly smaller icons */
+  }
+
+  .category-card h3 {
+    font-size: 1.3rem;
+  }
+}

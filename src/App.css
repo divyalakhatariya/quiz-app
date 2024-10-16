@@ -1,0 +1,110 @@
+/* Light and Dark Themes */
+body[data-theme='light'] {
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --card-bg: #fff;
+  --nav-bg: #ffccd5;
+  --button-color: #ff7597;
+  --hover-card-shadow: rgba(0, 0, 0, 0.1);
+  --navbar-text-color: #4f4f4f; /* Light black for navbar text */
+  --card-text-color: #000; /* Dark text for card */
+}
+
+body[data-theme='dark'] {
+  --bg-color: #181818;
+  --text-color: #f4f4f9;
+  --card-bg: #242424;
+  --nav-bg: #ffccd5;
+  --button-color: #ff7597;
+  --hover-card-shadow: rgba(255, 255, 255, 0.1);
+  --navbar-text-color: #333; /* Light black for navbar text in dark mode */
+  --card-text-color: #fff; /* White text for card in dark mode */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center; /* Center the entire content */
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Larger Tablets and Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px; /* Reduced gap for better fit */
+  }
+
+  .navbar h1 {
+    font-size: 1.6rem;
+  }
+
+  .category-card {
+    width: 220px; /* Slightly smaller cards */
+    height: 120px;
+  }
+
+  .category-card .icon {
+    font-size: 2rem; /* Slightly smaller icons */
+  }
+
+  .category-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Phones and Smaller Tablets (768px and below) */
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* 1 card per row */
+    gap: 15px;
+  }
+
+  .home {
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-direction: row; /* Ensure navbar stays in a single line */
+    justify-content: space-between;
+    padding: 15px 10px;
+    text-align: center;
+
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+    /*margin-bottom: 10px;*/
+  }
+
+  .navbar button {
+    margin-left: 10px;
+  }
+
+  .category-card {
+    width: 250px;
+    height: 130px; /* Adjust card size for small screens */
+    padding: 15px; /* Smaller padding */
+  }
+
+  .category-card .icon {
+    font-size: 1.8rem;
+  }
+
+  .category-card h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+}
+
